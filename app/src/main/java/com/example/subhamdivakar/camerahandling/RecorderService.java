@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
 import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
@@ -24,7 +25,8 @@ public class RecorderService extends Service {
 	private static Camera mServiceCamera;
 	private boolean mRecordingStatus;
 	private MediaRecorder mMediaRecorder;
-	
+	Uri filepath;
+
 	@Override
 	public void onCreate() {
 		mRecordingStatus = false;
@@ -108,10 +110,10 @@ public class RecorderService extends Service {
             mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
 			mMediaRecorder.setOutputFile(Environment.getExternalStorageDirectory().getPath() + "/video.mp4");
 			mMediaRecorder.setPreviewDisplay(mSurfaceHolder.getSurface());
-			
+			filepath=Uri.parse(Environment.getExternalStorageDirectory().getPath() + "/video.mp4");
 			mMediaRecorder.prepare();
 			mMediaRecorder.start();
-
+//"/storage/emulated/0/video.mp4"
 			mRecordingStatus = true;
 			
 			return true;
@@ -130,6 +132,9 @@ public class RecorderService extends Service {
 
 	public void stopRecording() {
 		Toast.makeText(getBaseContext(), "Recording Stopped", Toast.LENGTH_SHORT).show();
+		Intent serviceIntent = new Intent(getBaseContext(),FirebaseBackgroundService.class);
+		serviceIntent.putExtra("UserID", filepath.toString());
+		getBaseContext().startService(serviceIntent);
 		try {
 			mServiceCamera.reconnect();
 
@@ -145,6 +150,9 @@ public class RecorderService extends Service {
 		
 		mServiceCamera.release();
 		mServiceCamera = null;
+//		Intent serviceIntent = new Intent(getBaseContext(),FirebaseBackgroundService.class);
+//		serviceIntent.putExtra("UserID", filepath.toString());
+//		getBaseContext().startService(serviceIntent);
 	}
 
 }

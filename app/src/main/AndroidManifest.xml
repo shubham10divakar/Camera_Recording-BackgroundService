@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".CameraRecorder">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +27,7 @@
         </activity>
         <service android:name="com.example.subhamdivakar.camerahandling.RecorderService" />
         <service android:name="com.example.subhamdivakar.camerahandling.PowerButtonService" />
+        <service android:name="com.example.subhamdivakar.camerahandling.FirebaseBackgroundService" />
     </application>
 
 
