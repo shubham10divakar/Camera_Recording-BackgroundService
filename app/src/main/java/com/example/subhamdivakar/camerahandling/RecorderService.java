@@ -132,9 +132,9 @@ public class RecorderService extends Service {
 
 	public void stopRecording() {
 		Toast.makeText(getBaseContext(), "Recording Stopped", Toast.LENGTH_SHORT).show();
-		Intent serviceIntent = new Intent(getBaseContext(),FirebaseBackgroundService.class);
-		serviceIntent.putExtra("UserID", filepath.toString());
-		getBaseContext().startService(serviceIntent);
+		//Intent serviceIntent = new Intent(getBaseContext(),FirebaseBackgroundService.class);
+		//serviceIntent.putExtra("UserID", filepath.toString());
+		//getBaseContext().startService(serviceIntent);
 		try {
 			mServiceCamera.reconnect();
 
