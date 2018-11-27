@@ -62,6 +62,8 @@ public class CameraRecorder extends Activity implements SurfaceHolder.Callback {
 		if(!hasFocus) {
 			Intent closeDialog = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
 			sendBroadcast(closeDialog);
+
+			//
 		}
 	}
     
