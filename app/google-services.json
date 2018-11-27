@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1028076980045",
+    "firebase_url": "https://camera-handling.firebaseio.com",
+    "project_id": "camera-handling",
+    "storage_bucket": "camera-handling.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028076980045:android:676497a3cfb42a05",
+        "android_client_info": {
+          "package_name": "com.example.subhamdivakar.camerahandling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028076980045-kks14nsvsharpvq9hu83hcg94gulcvis.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.subhamdivakar.camerahandling",
+            "certificate_hash": "8d6b9e3864bac7781a10893e83b4b0a4445e9d16"
+          }
+        },
+        {
+          "client_id": "1028076980045-iefn9lj6v0ocph20ldtvm80uq1mpcdu7.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1028076980045-iefn9lj6v0ocph20ldtvm80uq1mpcdu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMnSXaFbg0vJEOY37Aa9WsO3NTrE511To"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028076980045-iefn9lj6v0ocph20ldtvm80uq1mpcdu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
